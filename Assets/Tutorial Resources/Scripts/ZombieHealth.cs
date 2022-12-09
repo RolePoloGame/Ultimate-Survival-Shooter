@@ -1,4 +1,6 @@
 ﻿using Core.Systems.Components.Systems;
+using Core.World;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -10,8 +12,10 @@ public class ZombieHealth : EnemyHealth, IHealthSystem
     private HealthSystem healthSystem;
 
     public float StartingHealth = 100.0f;
-    public int ScoreValue { get; set; } = 10;
-    public int BackupAmmo { get; set; } = 10;
+    [SerializeField]
+    private int ScoreValue = 10;
+    [SerializeField]
+    private int BackupAmmo = 10;
     #endregion
 
     #region Private Fields
@@ -63,7 +67,7 @@ public class ZombieHealth : EnemyHealth, IHealthSystem
     }
     private ParticleSystem GetHitParticles()
     {
-        if (hitParticles == null) hitParticles = GetComponent<ParticleSystem>();
+        if (hitParticles == null) hitParticles = GetComponentInChildren<ParticleSystem>();
         return hitParticles;
     }
     private CapsuleCollider GetCapsuleCollider()
@@ -148,9 +152,16 @@ public class ZombieHealth : EnemyHealth, IHealthSystem
         GetNavMeshAgent().enabled = false;
         GetRigidbody().isKinematic = true;
         isSinking = true;
+        DisableMinimapIcon();
         Destroy(gameObject, destroyTime);
     }
 
+    private void DisableMinimapIcon()
+    {
+        GetComponentInChildren<MinimapIcon>().gameObject.SetActive(false);
+    }
+
     public void Hurt(float value, Vector3 point) => TakeDamage(value, point);
+    public void Heal(float value, Vector3 point) => HealthSystem.Heal(value);
     #endregion
 }

@@ -1,13 +1,22 @@
-﻿using System.Collections;
+﻿using Core.World;
+using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public List<GameObject> enemies = new List<GameObject>();
-    public float spawnTime = 3f;
+    [SerializeField]
+    [Required]
+    private Transform MinimapCamera;
 
-    List<Transform> spawnPoints;
+    [SerializeField]
+    private List<GameObject> enemies = new();
+    [SerializeField]
+    private float spawnTime = 3f;
+
+    [SerializeField]
+    [ReadOnly]
+    private List<Transform> spawnPoints;
 
     void Start()
     {
@@ -29,9 +38,22 @@ public class EnemyManager : MonoBehaviour
 
     void Spawn()
     {
-        int spawnPointIndex = Random.Range(0, spawnPoints.Count);
-        int randomIndex = Random.Range(0, enemies.Count - 1);
-        GameObject createdGameObject = Instantiate(enemies[randomIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        Transform spawnTransform = GetRandomSpawnTransform();
+        GameObject createdGameObject = Instantiate(GetRandomEnemyPrefab(), spawnTransform.position, spawnTransform.rotation);
+        createdGameObject.GetComponentInChildren<MinimapIcon>().UpdateMinimapCamera(MinimapCamera);
     }
 
+    private Transform GetRandomSpawnTransform()
+    {
+        int spawnPointIndex = Random.Range(0, spawnPoints.Count);
+        Transform spawnTransform = spawnPoints[spawnPointIndex];
+        return spawnTransform;
+    }
+
+    private GameObject GetRandomEnemyPrefab()
+    {
+        int randomIndex = Random.Range(0, enemies.Count - 1);
+        GameObject spawnedEnemy = enemies[randomIndex];
+        return spawnedEnemy;
+    }
 }

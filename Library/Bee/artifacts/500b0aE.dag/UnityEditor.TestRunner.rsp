@@ -116,7 +116,7 @@
 -define:CROSS_PLATFORM_INPUT
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"D:/Programy/Unity Versions/2021.3.13f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/Programy/Unity Versions/2021.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Programy/Unity Versions/2021.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

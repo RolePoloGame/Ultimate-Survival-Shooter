@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7C01505C-CAFD-CE01-1523-4EEDB70976E5}</ProjectGuid>
+    <ProjectGuid>{46E87666-C2E6-9D4C-0AA2-77802424A4D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,57 +56,58 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Core\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\GameOverManager.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\EnemyManager.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\Core\Scripts\System\Components\AmmoSystem.cs" />
+    <Compile Include="Assets\Core\Scripts\System\HealingStation.cs" />
+    <Compile Include="Assets\Core\Scripts\Managers\SimpleAnimatorControler.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\State.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\PlayerShooting.cs" />
+    <Compile Include="Assets\Core\Scripts\System\AmmoStation.cs" />
     <Compile Include="Assets\Tanks Resources\Scripts\Shell\ShellExplosion.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\EnemyStats.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Core\Scripts\GUI\SegmentRing.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\ZombieHealth.cs" />
+    <Compile Include="Assets\Core\Scripts\System\Components\HealthSystem.cs" />
     <Compile Include="Assets\Tanks Resources\Scripts\Tank\TankShooting.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\HealthDecision.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\LookDecision.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\PatrolAction.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Tanks Resources\Scripts\Tank\TankHealth.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\Action.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\RunAction.cs" />
     <Compile Include="Assets\Tanks Resources\Scripts\UI\UIDirectionControl.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\ChaseAction.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\IHealthSystem.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\ScanDecision.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\Rotator.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\ZombieMovement.cs" />
+    <Compile Include="Assets\Core\Scripts\GUI\RingHealthbarControler.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\ActiveStateDecision.cs" />
     <Compile Include="Assets\Tutorial Resources\Scripts\ZombieAttack.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\Transition.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\AttackAction.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\Decision.cs" />
-    <Compile Include="Assets\Tanks Resources\Scripts\Tank\TankMovement.cs" />
-    <Compile Include="Assets\Tutorial Resources\Scripts\EnemyHealth.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateController.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\Core\Scripts\Managers\AudioManager.cs" />
-    <Compile Include="Assets\Core\Scripts\System\HealingStation.cs" />
-    <Compile Include="Assets\Core\Scripts\Managers\SimpleAnimatorControler.cs" />
-    <Compile Include="Assets\Core\Scripts\Managers\Singleton.cs" />
-    <Compile Include="Assets\Core\Scripts\System\Components\HealthSystem.cs" />
-    <Compile Include="Assets\Core\Scripts\System\Components\AmmoSystem.cs" />
-    <Compile Include="Assets\Core\Scripts\GUI\SegmentRing.cs" />
-    <Compile Include="Assets\Core\Scripts\System\AmmoStation.cs" />
+    <Compile Include="Assets\Tanks Resources\Scripts\Tank\TankMovement.cs" />
     <Compile Include="Assets\Core\Scripts\World\Symbols\MinimapIcon.cs" />
+    <Compile Include="Assets\Tutorial Resources\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Core\Scripts\Managers\Singleton.cs" />
+    <Compile Include="Assets\PluggableAI\Scripts\StateController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -754,17 +755,11 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>D:\Programy\Unity Versions\2021.3.13f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Purchasing.Common">
-      <HintPath>Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -775,23 +770,11 @@
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Analytics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityStub">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -802,26 +785,26 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityCore">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.Codeless">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
@@ -829,42 +812,24 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Monetization">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{8552228A-F93C-CA1A-5234-E55A311E8849}</Project>
-      <Name>NaughtyAttributes.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{7DEFE59D-13E9-A595-81DD-6827EB274D27}</Project>
+      <Project>{85C151B4-B354-23BD-7841-CA0DD3EF31D2}</Project>
       <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
+    <ProjectReference Include="NaughtyAttributes.Editor.csproj">
+      <Project>{6DE58041-BFDE-ABD4-7A89-702F4EBD116F}</Project>
+      <Name>NaughtyAttributes.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{328746A5-5D89-80C6-7C63-3BB15F4185AF}</Project>
+      <Project>{06B45C90-F8B9-33CA-8F0B-919AF1717A4C}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
   </ItemGroup>

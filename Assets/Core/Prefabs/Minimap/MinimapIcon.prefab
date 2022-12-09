@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7fbce5ed53585fa4d8a28769d021b046, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e90bd9590d0c934a90f9f90085cf15a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09617184d32b6204b9eca0e536f3b1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprite: {fileID: 21300000, guid: 2e90bd9590d0c934a90f9f90085cf15a, type: 3}
+  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  FreezeRotation: 1
+  ApplyRotationOffset: 0
+  RotationOffset: 0
   KeepOnMinimapEdge: 0
+  HasToBeRemembered: 0
   MinimapCam: {fileID: 0}
-  MinimapSize: 0
-  Sprite: {fileID: 21300000, guid: 7fbce5ed53585fa4d8a28769d021b046, type: 3}
+  MinimapSize: 9
+  ScaleOnDistance: 0
+  DesaturizeOnDistance: 0
+  DefaultScale: 0.5
+  SmallestScale: 0.1

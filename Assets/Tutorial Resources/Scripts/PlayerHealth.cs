@@ -95,19 +95,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
     #region Public Methods
     public void TakeDamage(int amount, Vector3 hitPoint)
     {
-        TakeDamage(amount);
-    }
-    public void TakeDamage(int amount)
-    {
-        isDamaged = true;
-        HealthSystem.Hurt(amount);
-        UpdateHealthGUI();
-        audioSource.Play();
-
-        if (HealthSystem.IsDead && !isDeathInitated)
-        {
-            Death();
-        }
+        Hurt(amount, hitPoint);
     }
 
     public void Heal(int healingValue)
@@ -145,6 +133,21 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
         playerShooting.enabled = false;
     }
 
-    public void Hurt(float value, Vector3 point) => HealthSystem.Hurt(value);
+    public void Hurt(float value, Vector3 point)
+    {
+        isDamaged = true;
+        HealthSystem.Hurt(value);
+        UpdateHealthGUI();
+        GetAudioSource().Play();
+
+        if (HealthSystem.IsDead && !isDeathInitated)
+            Death();
+    }
+
+    public void Heal(float value, Vector3 point)
+    {
+        HealthSystem.Heal(value);
+        UpdateHealthGUI();
+    }
     #endregion
 }

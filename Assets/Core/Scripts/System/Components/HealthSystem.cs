@@ -64,14 +64,14 @@ namespace Core.Systems.Components.Systems
         {
             float _currValue = CurrentHealth;
             _currValue += value;
-            _currValue = Mathf.Max(_currValue, MaxHealth + TemporaryMaxHealth);
+            _currValue = Mathf.Min(_currValue, MaxHealth + TemporaryMaxHealth);
             CurrentHealth = _currValue;
         }
         public void Hurt(float value)
         {
             float _currValue = CurrentHealth;
             _currValue -= value;
-            _currValue = Mathf.Min(_currValue, MinHealth);
+            _currValue = Mathf.Max(_currValue, MinHealth);
             CurrentHealth = _currValue;
         } 
         #endregion

@@ -16,6 +16,9 @@ namespace Core.Managers.Animators
         [SerializeField]
         [Required]
         private Animator _animator;
+
+        public bool IsActive { get => active; }
+        private bool active;
         #endregion
 
         #region Public Methods
@@ -44,6 +47,7 @@ namespace Core.Managers.Animators
         {
             if (_animator == null)
                 return;
+            active = Active;
             _animator.SetBool(nameof(Active), Active);
             _animator.SetBool(nameof(NotActive), NotActive);
         }

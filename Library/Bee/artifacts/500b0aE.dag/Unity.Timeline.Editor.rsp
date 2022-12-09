@@ -118,12 +118,12 @@
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll"
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/log4netPlastic.dll"
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/unityplastic.dll"
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
--r:"D:/GameDev/Eryk Kwaśniak Ultimate Survival Shooter/Ultimate Survival Shooter/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/log4netPlastic.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.collab-proxy@1.17.6/Lib/Editor/PlasticSCM/unityplastic.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"D:/GameDev/Ultimate-Survival-Shooter/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"D:/Programy/Unity Versions/2021.3.13f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/Programy/Unity Versions/2021.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Programy/Unity Versions/2021.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

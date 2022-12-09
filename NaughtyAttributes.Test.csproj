@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7DEFE59D-13E9-A595-81DD-6827EB274D27}</ProjectGuid>
+    <ProjectGuid>{85C151B4-B354-23BD-7841-CA0DD3EF31D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>NaughtyAttributes.Test</AssemblyName>
@@ -57,41 +57,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_NaughtyScriptableObject.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\InputAxisTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\OnValueChangedTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowAssetPreviewTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_NaughtyComponent.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\InfoBoxTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowNonSerializedFieldTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\EnumFlagsTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ExpandableTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\EnableIfTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowIfTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowNativePropertyTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\SceneTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_TestScriptableObjectB.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_TestScriptableObjectA.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\AnimatorParamTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\MinMaxValueTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\HorizontalLineTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\LabelTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\LayerTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ReadOnlyTest.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Test\MinMaxSliderTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\BoxGroupTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ButtonTest.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ResizableTextAreaTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\TagTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\HideIfTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ProgressBarTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\CurveRangeTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\RequiredTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ValidateInputTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\DisableIfTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\DropdownTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\FoldoutTest.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ReorderableListTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\OnValueChangedTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_TestScriptableObjectA.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Test\SortingLayerTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\MinMaxValueTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\BoxGroupTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ValidateInputTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\RequiredTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowAssetPreviewTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\EnumFlagsTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\HorizontalLineTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\InfoBoxTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ExpandableTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ButtonTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\DisableIfTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_NaughtyComponent.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\TagTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\DropdownTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\_TestScriptableObjectB.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowNativePropertyTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ReadOnlyTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\AnimatorParamTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ReorderableListTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowNonSerializedFieldTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\EnableIfTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\LayerTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ShowIfTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\LabelTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\ProgressBarTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\InputAxisTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\CurveRangeTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\SceneTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\HideIfTest.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Test\FoldoutTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NaughtyAttributes\Scripts\Test\NaughtyAttributes.Test.asmdef" />
@@ -349,12 +349,6 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Programy\Unity Versions\2021.3.13f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -364,8 +358,14 @@
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
     <Reference Include="JMOAssets_CartoonFXFreeWelcome">
       <HintPath>Assets\JMO Assets\Editor\JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Programy\Unity Versions\2021.3.13f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -742,7 +742,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{328746A5-5D89-80C6-7C63-3BB15F4185AF}</Project>
+      <Project>{06B45C90-F8B9-33CA-8F0B-919AF1717A4C}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
   </ItemGroup>

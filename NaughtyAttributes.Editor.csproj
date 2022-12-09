@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8552228A-F93C-CA1A-5234-E55A311E8849}</ProjectGuid>
+    <ProjectGuid>{6DE58041-BFDE-ABD4-7A89-702F4EBD116F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>NaughtyAttributes.Editor</AssemblyName>
@@ -56,37 +56,37 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ProgressBarPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\DecoratorDrawers\HorizontalLineDecoratorDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\MinValuePropertyValidator.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\AllowNestingPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\PropertyValidatorBase.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\ButtonUtility.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\ValidateInputPropertyValidator.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\SortingLayerPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ShowAssetPreviewPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\EnumFlagsPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ScenePropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\DropdownPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\PropertyUtility.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\TagPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\PropertyDrawerBase.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\SavedBool.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\RequiredPropertyValidator.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\MaxValuePropertyValidator.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers_SpecialCase\SpecialCasePropertyDrawerBase.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\NaughtyInspector.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\AnimatorParamPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\CurveRangePropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\DecoratorDrawers\InfoBoxDecoratorDrawer.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\InputAxisPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ResizableTextAreaPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\SavedBool.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\CurveRangePropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ScenePropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\ButtonUtility.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\DecoratorDrawers\InfoBoxDecoratorDrawer.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\NaughtyEditorGUI.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\DecoratorDrawers\HorizontalLineDecoratorDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\RequiredPropertyValidator.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ProgressBarPropertyDrawer.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers_SpecialCase\ReorderableListPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\PropertyUtility.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\MinMaxSliderPropertyDrawer.cs" />
-    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\ReflectionUtility.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\EnumFlagsPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\SortingLayerPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\PropertyDrawerBase.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\AnimatorParamPropertyDrawer.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ExpandablePropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\NaughtyInspector.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\PropertyValidatorBase.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\Utility\ReflectionUtility.cs" />
     <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\LayerPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\MinValuePropertyValidator.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\ValidateInputPropertyValidator.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ShowAssetPreviewPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyValidators\MaxValuePropertyValidator.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\DropdownPropertyDrawer.cs" />
+    <Compile Include="Assets\NaughtyAttributes\Scripts\Editor\PropertyDrawers\ResizableTextAreaPropertyDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NaughtyAttributes\Scripts\Editor\NaughtyAttributes.Editor.asmdef" />
@@ -347,12 +347,6 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Programy\Unity Versions\2021.3.13f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -362,8 +356,14 @@
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
     <Reference Include="JMOAssets_CartoonFXFreeWelcome">
       <HintPath>Assets\JMO Assets\Editor\JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -758,7 +758,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{328746A5-5D89-80C6-7C63-3BB15F4185AF}</Project>
+      <Project>{06B45C90-F8B9-33CA-8F0B-919AF1717A4C}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
   </ItemGroup>
