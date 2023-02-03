@@ -69,12 +69,12 @@ namespace Core.World
         {
             if (MinimapCam == null)
             {
-
-                if (!EditorApplication.isPlaying)
-                    return transform;
-                Debug.LogError("MinimapCam not set, disabling locking to camera edge");
-                KeepOnMinimapEdge = false;
-                return transform;
+                //if (!EditorApplication.isPlaying)
+                //    return transform;
+                MinimapCam = CameraFollow.Camera;
+                //Debug.LogError("MinimapCam not set, disabling locking to camera edge");
+                //KeepOnMinimapEdge = false;
+                //return transform;
             }
             return MinimapCam;
         }
@@ -152,7 +152,7 @@ namespace Core.World
         private void SetIconPosition()
         {
             // Center of Minimap
-            Vector3 centerPosition = GetMinimapCam().transform.localPosition;
+            Vector3 centerPosition = GetMinimapCam().localPosition;
 
             centerPosition.y = transform.position.y;
 

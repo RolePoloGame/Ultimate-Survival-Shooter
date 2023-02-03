@@ -55,6 +55,7 @@ MonoBehaviour:
   Radius: 1.5
   HealValue: 5
   HealInterval: 5
+  DissapearTime: 5
   HasHealLimit: 0
   HealLimit: 0
   HasUseLimit: 0
@@ -71,6 +72,7 @@ MonoBehaviour:
   DestroyOnDeactivatation: 0
   VisualizeColider: 0
   VisualizationColor: {r: 1, g: 0, b: 0.046499252, a: 1}
+  minimapIcon: {fileID: 1599253299171327236}
 --- !u!114 &427905485877538608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,6 +5171,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 443402478238195194, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
+      propertyPath: MinimapCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 443402478238195194, guid: beac4faf5ab4ac243be223a99925ac92,
+        type: 3}
       propertyPath: IconColor.b
       value: 0.8269937
       objectReference: {fileID: 0}
@@ -5215,32 +5222,32 @@ PrefabInstance:
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.47819644
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.47819644
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.47819644
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0062505933
+      value: 0.0062502585
       objectReference: {fileID: 0}
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.999809
+      value: 4.999541
       objectReference: {fileID: 0}
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.016821582
+      value: 0.01682068
       objectReference: {fileID: 0}
     - target: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,
         type: 3}
@@ -5300,6 +5307,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beac4faf5ab4ac243be223a99925ac92, type: 3}
+--- !u!114 &1599253299171327236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 443402478238195194, guid: beac4faf5ab4ac243be223a99925ac92,
+    type: 3}
+  m_PrefabInstance: {fileID: 1159386991156011262}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09617184d32b6204b9eca0e536f3b1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9030036142176973818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7874502529243255556, guid: beac4faf5ab4ac243be223a99925ac92,

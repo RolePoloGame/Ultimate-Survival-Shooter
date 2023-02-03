@@ -6,6 +6,7 @@ using System;
 using UnityEditor;
 using Core.GUI.Healthbar;
 using Core.Managers.Animators;
+using Core.World;
 /**
 * ? Wartoœci jednorazowej regeneracji
 * ? Ca³kowita iloœæ zregenerowanego HP (lub brak limitu), po której nastêpuje dezaktywacja obiekt regeneruj¹cego.
@@ -43,6 +44,11 @@ namespace Core.Systems.Stations
         [SerializeField]
         [ShowIf(nameof(ShowSettings))]
         private float HealInterval = 5f;
+
+        [BoxGroup("Settings")]
+        [SerializeField]
+        [ShowIf(EConditionOperator.And, nameof(ShowSettings), nameof(DestroyOnDeactivatation))]
+        private float DissapearTime = 5f;
 
         #endregion
 
@@ -163,6 +169,9 @@ namespace Core.Systems.Stations
         #endregion
 
         #region Components
+        [SerializeField]
+        [Required]
+        private MinimapIcon minimapIcon;
 
         private ParticleSystem healParticles;
         private ParticleSystem GetHealParticles()
@@ -242,6 +251,7 @@ namespace Core.Systems.Stations
 
         private void OnDrawGizmosSelected()
         {
+            if (!VisualizeColider) return;
             Gizmos.color = VisualizationColor;
             Gizmos.DrawWireSphere(transform.position, Radius);
         }
@@ -348,6 +358,8 @@ namespace Core.Systems.Stations
             if (Cooldown && DestroyOnDeactivatation)
             {
                 Deactivate = true;
+                minimapIcon.gameObject.SetActive(false);
+                StartCoroutine(DeactivateSelfAfter(DissapearTime));
             }
 
             if (!HasHealCooldown)
@@ -360,13 +372,35 @@ namespace Core.Systems.Stations
             {
                 ResetCounters();
                 if (Deactivate)
-                    gameObject.SetActive(false);
+                {
+                    DeactivateSelf();
+                }
+
                 Cooldown = false;
                 return false;
             }
 
             CooldownTimer += Time.deltaTime;
             return true;
+        }
+
+        private IEnumerator DeactivateSelfAfter(float healCooldown)
+        {
+            float timer = 0.0f;
+            while (timer < healCooldown)
+            {
+                yield return null;
+                timer += Time.deltaTime;
+            }
+            if (Deactivate)
+            {
+                DeactivateSelf();
+            }
+        }
+
+        private void DeactivateSelf()
+        {
+            gameObject.SetActive(false);
         }
 
         private void ResetCounters()

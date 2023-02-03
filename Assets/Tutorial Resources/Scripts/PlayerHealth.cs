@@ -2,11 +2,15 @@
 using UnityEngine;
 using Core.Systems.Components.Systems;
 using UnityEngine.AI;
+using NaughtyAttributes;
 
-public class PlayerHealth : MonoBehaviour, IHealthSystem
+public class PlayerHealth : EnemyHealth, IHealthSystem
 {
+    [BoxGroup("Dev Overrides")]
     [SerializeField]
-    private float StartingHealth = 100;                            // The amount of health the player starts the game with.
+    private bool Imortality = false;
+
+
     [SerializeField]
     private Slider healthSlider;                                 // Reference to the UI's health bar.
     [SerializeField]
@@ -28,6 +32,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
     private Rigidbody rb;
     public HealthSystem HealthSystem { get => healthSystem; set => healthSystem = value; }
     private HealthSystem healthSystem;
+
     #region Getters
     private Rigidbody GetRigidbody()
     {
@@ -61,6 +66,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
     #region Tags
     private bool isDeathInitated;
     private bool isDamaged;
+    public override bool IsDead { get => HealthSystem.IsDead; }
     #endregion
 
     #region Unity Methods
@@ -70,7 +76,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
         audioSource = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         playerShooting = GetComponentInChildren<PlayerShooting>();
-        HealthSystem = new HealthSystem(StartingHealth);
+        HealthSystem = new HealthSystem(m_StartingHealth);
     }
     void Update()
     {
@@ -93,8 +99,10 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
     #endregion
 
     #region Public Methods
-    public void TakeDamage(int amount, Vector3 hitPoint)
+    public override void TakeDamage(float amount, Vector3 hitPoint)
     {
+        if (Imortality)
+            return;
         Hurt(amount, hitPoint);
     }
 
@@ -135,6 +143,8 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
 
     public void Hurt(float value, Vector3 point)
     {
+        if (Imortality)
+            return;
         isDamaged = true;
         HealthSystem.Hurt(value);
         UpdateHealthGUI();

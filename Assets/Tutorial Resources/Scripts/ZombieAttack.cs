@@ -78,7 +78,7 @@ public class ZombieAttack : MonoBehaviour
         if (!playerHealth.HealthSystem.IsDead)
         {
             // ... damage the player.
-            playerHealth.TakeDamage(attackDamage, new Vector3());
+            playerHealth.TakeDamage((float)attackDamage, new Vector3());
         }
     }
 }

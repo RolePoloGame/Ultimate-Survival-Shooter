@@ -1,22 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Core.Systems.Components.Systems;
 
-public class TankHealth : EnemyHealth
+public class TankHealth : EnemyHealth, IHealthSystem
 {
-    public float m_StartingHealth = 100f;               // The amount of health each tank starts with.
     public Slider m_Slider;                             // The slider to represent how much health the tank currently has.
     public Image m_FillImage;                           // The image component of the slider.
-    public Color m_FullHealthColor = Color.green;       // The color the health bar will be when on full health.
-    public Color m_ZeroHealthColor = Color.red;         // The color the health bar will be when on no health.
     public GameObject m_ExplosionPrefab;                // A prefab that will be instantiated in Awake, then used whenever the tank dies.
-
 
     private AudioSource m_ExplosionAudio;               // The audio source to play when the tank explodes.
     private ParticleSystem m_ExplosionParticles;        // The particle system the will play when the tank is destroyed.
-    private float m_CurrentHealth;                      // How much health the tank currently has.
     private bool m_Dead;                                // Has the tank been reduced beyond zero health yet?
 
+    public HealthSystem HealthSystem => new(m_StartingHealth);
 
     private void Awake()
     {
@@ -28,32 +25,29 @@ public class TankHealth : EnemyHealth
 
     private void OnEnable()
     {
-        m_CurrentHealth = m_StartingHealth;
+        CurrentHealth = m_StartingHealth;
         m_Dead = false;
         SetHealthUI();
     }
 
     public override void TakeDamage(float amount, Vector3 hitPoint)
     {
-        m_CurrentHealth -= amount;
+        CurrentHealth -= amount;
         SetHealthUI();
-        if (m_CurrentHealth <= 0f && !m_Dead)
+        if (CurrentHealth <= 0f && !m_Dead)
         {
             OnDeath();
         }
     }
-
-
     private void SetHealthUI()
     {
         // Set the slider's value appropriately.
-        m_Slider.value = m_CurrentHealth;
+        m_Slider.value = GetHealthPercentage();
 
         // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
-        m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+        m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, CurrentHealth / m_StartingHealth);
     }
 
-    public float GetHealthPercentage() => m_CurrentHealth / m_StartingHealth;
     private void OnDeath()
     {
         // Set the flag so that this function is only called once.
@@ -72,4 +66,8 @@ public class TankHealth : EnemyHealth
         // Turn the tank off.
         gameObject.SetActive(false);
     }
+
+    public void Hurt(float value, Vector3 point) => TakeDamage(value, point);
+
+    public void Heal(float value, Vector3 point) => TakeDamage(-value, point);
 }

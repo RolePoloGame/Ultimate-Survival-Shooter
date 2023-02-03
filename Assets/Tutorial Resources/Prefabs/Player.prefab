@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7962146100700180343}
   - component: {fileID: 7882870766671051712}
   - component: {fileID: 2547812607188306844}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 129560}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1.2
   m_Direction: 1
@@ -118,7 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c135cf06b1b071c4fb67c4969d3c1b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingHealth: 100
+  m_StartingHealth: 100
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  GotHitMemory: 10
+  Imortality: 0
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
@@ -5497,9 +5501,10 @@ GameObject:
   m_Component:
   - component: {fileID: 486862}
   - component: {fileID: 13739792}
-  m_Layer: 0
+  - component: {fileID: 6900716444695555598}
+  m_Layer: 15
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5572,6 +5577,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.3269543, y: 0.75587475, z: -0.11117919}
     m_Extent: {x: 0.65293604, y: 0.9034525, z: 0.5937181}
   m_DirtyAABB: 0
+--- !u!136 &6900716444695555598
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.2
+  m_Direction: 1
+  m_Center: {x: 0.2, y: 0.6, z: 0}
 --- !u!1001 &8247041175169657490
 PrefabInstance:
   m_ObjectHideFlags: 0

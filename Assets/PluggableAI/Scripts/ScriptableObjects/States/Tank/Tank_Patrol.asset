@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84018da641fe76d4db6cc3a915c41995, type: 3}
+  m_Name: Tank_Patrol
+  m_EditorClassIdentifier: 
+  Debugging: 0
+  actions:
+  - {fileID: 11400000, guid: 650635ef18fe71a46870305e6bee0d77, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: afe02b960b92bfe44bf7898e9deecc4c, type: 2}
+    trueState: {fileID: 11400000, guid: 810dbcfecf61a944d8d1a4dba674e194, type: 2}
+    falseState: {fileID: 11400000, guid: 6fbe0a520555ec6499b332fa56b3000f, type: 2}
+  - decision: {fileID: 11400000, guid: 8f27d294b083df042bf4980507258d9a, type: 2}
+    trueState: {fileID: 11400000, guid: 55c07bc838c5672409766e9ca1fc473e, type: 2}
+    falseState: {fileID: 11400000, guid: 6fbe0a520555ec6499b332fa56b3000f, type: 2}
+  - decision: {fileID: 11400000, guid: 339c4651d219f9749b80c7971fba5eee, type: 2}
+    trueState: {fileID: 11400000, guid: aeff8c8784c66304d8f514e453d998af, type: 2}
+    falseState: {fileID: 11400000, guid: 6fbe0a520555ec6499b332fa56b3000f, type: 2}
+  sceneGizmoColor: {r: 0, g: 1, b: 0.110619545, a: 1}

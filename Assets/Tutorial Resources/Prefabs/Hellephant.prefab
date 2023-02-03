@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -3260035428754435803}
   - component: {fileID: 3018554419535696532}
   - component: {fileID: 8983413523603917905}
+  - component: {fileID: 8152608879669380984}
   m_Layer: 9
   m_Name: Hellephant
   m_TagString: Zombie
@@ -156,7 +157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e226ea28c4e4d6f48b4dc42c5e11fd64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingHealth: 500
+  m_StartingHealth: 100
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  GotHitMemory: 10
   ScoreValue: 50
   BackupAmmo: 25
   sinkSpeed: 2.5
@@ -274,6 +278,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8152608879669380984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59198bbfd402f6849947264d22443df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Loot: {fileID: 11400000, guid: 4929efdc342b35b4e945d128ac4ae34d, type: 2}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

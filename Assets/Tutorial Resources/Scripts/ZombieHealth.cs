@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class ZombieHealth : EnemyHealth, IHealthSystem
 {
     #region Public Fields
-    public HealthSystem HealthSystem { get => healthSystem ??= new HealthSystem(StartingHealth); set => healthSystem = value; }
+    public HealthSystem HealthSystem { get => healthSystem ??= new HealthSystem(m_StartingHealth); set => healthSystem = value; }
     private HealthSystem healthSystem;
 
-    public float StartingHealth = 100.0f;
+    //public float StartingHealth = 100.0f;
     [SerializeField]
     private int ScoreValue = 10;
     [SerializeField]
@@ -43,8 +43,14 @@ public class ZombieHealth : EnemyHealth, IHealthSystem
     private CapsuleCollider capsuleCollider;
     private Rigidbody rb;
     private NavMeshAgent meshAgent;
+    private LootDrop lootDrop;
 
     #region Getters
+    private LootDrop GetLootDrop()
+    {
+        if (lootDrop == null) lootDrop = GetComponent<LootDrop>();
+        return lootDrop;
+    }
     private Rigidbody GetRigidbody()
     {
         if (rb == null) rb = GetComponent<Rigidbody>();
@@ -104,7 +110,7 @@ public class ZombieHealth : EnemyHealth, IHealthSystem
     #region Private Methods
     private void Initiate()
     {
-        HealthSystem = new HealthSystem(StartingHealth);
+        HealthSystem = new HealthSystem(m_StartingHealth);
         UpdateHealthUI();
     }
 
@@ -127,6 +133,7 @@ public class ZombieHealth : EnemyHealth, IHealthSystem
         GetAnimator().SetTrigger("Dead");
         GetAudioSource().clip = deathClip;
         GetAudioSource().Play();
+        GetLootDrop().SpawnLoot();
     }
     #endregion
 

@@ -10237,7 +10237,6 @@ GameObject:
   - component: {fileID: 5489450}
   - component: {fileID: 6507708}
   - component: {fileID: 8261418}
-  - component: {fileID: 8268710}
   - component: {fileID: 11409376}
   - component: {fileID: 11488788}
   - component: {fileID: 195979757215206982}
@@ -10396,102 +10395,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &8268710
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173472}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &11409376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10505,10 +10408,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_StartingHealth: 200
-  m_Slider: {fileID: 11482748}
-  m_FillImage: {fileID: 11404512}
   m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
   m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  GotHitMemory: 10
+  m_Slider: {fileID: 11482748}
+  m_FillImage: {fileID: 11404512}
   m_ExplosionPrefab: {fileID: 151086, guid: 6bc6d0dd8b8428e4ca316513f2cf13c6, type: 3}
 --- !u!114 &11488788
 MonoBehaviour:
@@ -10522,7 +10426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184d72ea2424d1443bca885930fe844a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Shell: {fileID: 5409530, guid: 008ecb1b70bec724fa2cd34255b0d8f8, type: 3}
+  MaxDistance: 10
+  m_Shell: {fileID: 92023841529950047, guid: 21d7b8a271d430f4cb8fd4b67bc89ce7, type: 3}
   m_FireTransform: {fileID: 435794}
 --- !u!195 &195979757215206982
 NavMeshAgent:
@@ -10558,19 +10463,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7aaa7bb6b9384548b1e290d925e3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: {fileID: 11400000, guid: 0730731c8b59949449a910f65f867994, type: 2}
-  enemyStats: {fileID: 11400000, guid: 7d36427061c3c3341b14c5ddc05b51b6, type: 2}
-  eyes: {fileID: 4487636023762108}
+  Debugging: 0
+  startState: {fileID: 11400000, guid: 0730731c8b59949449a910f65f867994, type: 2}
+  currentState: {fileID: 0}
+  stats: {fileID: 11400000, guid: 7d36427061c3c3341b14c5ddc05b51b6, type: 2}
   remainState: {fileID: 11400000, guid: 6fbe0a520555ec6499b332fa56b3000f, type: 2}
   wayPointList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  navMeshAgent: {fileID: 0}
-  tankShooting: {fileID: 0}
-  nextWayPoint: 0
-  chaseTarget: {fileID: 0}
-  stateTimeElapsed: 0
+  m_navMeshAgent: {fileID: 195979757215206982}
+  m_shooting: {fileID: 11488788}
+  m_flags:
+    Active: 1
+    Arrived: 0
+    Hit: 0
+    Look: 0
+    InversedRotation: 0
+  m_data:
+    Target: {fileID: 0}
+    NextWayPoint: 0
+    StateTimeElapsed: 0
+    RotationElapsed: 0
+    RotatingElement: {fileID: 446194}
+    Aim: {fileID: 4487636023762108}
+    Eyes: {fileID: 4487636023762108}
+    EyeSight: {fileID: 1758994248658806349}
+    SavedRotation: {x: 0, y: 0, z: 0}
+    SafeSpace: {fileID: 0}
+    EnemyHealth: {fileID: 11409376}
 --- !u!1 &173936
 GameObject:
   m_ObjectHideFlags: 0
@@ -10712,6 +10633,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4487636023762108}
+  - component: {fileID: 3159255108773228938}
+  - component: {fileID: 1758994248658806349}
   m_Layer: 10
   m_Name: Eyes
   m_TagString: Untagged
@@ -10734,6 +10657,36 @@ Transform:
   m_Father: {fileID: 446194}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3159255108773228938
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274742231159662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1758994248658806349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274742231159662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41433e33c991b4e499fcdc79238a04eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debugging: 0
+  tags:
+  - Player
+  target: {fileID: 0}
+  _eyesightSize: 2
 --- !u!1001 &2136761490400602221
 PrefabInstance:
   m_ObjectHideFlags: 0
